@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    color: hsl(207, 47%, 82%);
+    background-color: #e9bcb7;
+    background-image: linear-gradient(315deg, #e9bcb7 0%, #29524a 74%);
+}
+
+/*Title*/
+.Head {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 60px;
+    transition: all 400ms ease-in-out;
+    transition-delay: 80ms;
+}
+
+/*Hover Effect*/
+.Head:hover {
+    font-size: 5.3rem;
+    color: rgb(206, 220, 238)
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    width: 80%;
+}
+
+#emo1,
+#emo2,
+#emo3 {
+    position: relative;
+    flex: 33%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.emoji1 {
+    margin-right: 20px;
+    font-size: 10rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.angry,
+.enraged,
+.open,
+.close,
+.egg,
+.hatch {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/*Responsive Design Section @media queries*/
+
+@media (min-width: 789px) {
+    .flex-container {
+      flex-direction: row;
+    }
+}
+
+@media (max-width: 675px) {
+    .Head {
+        margin-bottom: 90px;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 325px) {
+    .Head {
+        margin-bottom: 40px;
+        font-size: 1.7rem;
+    }
+}
